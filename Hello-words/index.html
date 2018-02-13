@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta charset="utf-8">
+	<title>Page de Saisie</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="verifier.js"></script>
+	</head>
+
+	<body>
+	<p>
+	<h2>Message de l'auteur</h2>
+	</p>
+		
+		<form name="form" method="post">
+				
+				<div id="erreur_auteur"></div>
+				<br><label>Auteur</label>
+				<input name="auteur" type="text" id="auteur" placeholder="Nom de l'auteur" onblur="verifAuteur()" /><br><br><br>
+			
+				<div id="erreur_message"></div>
+				<br><label>Message</label>
+				<textarea name="message" type="text" id="message" placeholder="Message de l'auteur" onblur="verifMessage()"></textarea><br><br><br>
+				
+				<div id="info"></div>
+		
+				<table>
+					<tr>
+						<td><input type="button" id="submit" name="valider" value="Enregistrer" onclick="return verifier()" /></td>
+						<td><input type="reset" value="Effacer"/></td>
+					</tr>
+				</table>
+						
+		</form>
+		
+		<div class="lien">	
+			<a href="./search.php" title="Faire une recherche par auteur ou message">Aller a la page de recherche</a>
+		</div>
+		
+	<footer>
+		<p>Copyright - Tous droits réservés<br />
+	</footer>
+	</body>
+</html>
